@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CHDayCollectionViewCell" id="gTV-IL-0wX" customClass="CHDayCollectionViewCell" customModule="CalendarView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4/7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yw-AC-hTf">
+                        <rect key="frame" x="4" y="0.0" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Ntp-mx-Yrp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
+                        <color key="textColor" red="0.1176470588" green="0.74901960779999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fr-6l-U0Z">
+                        <rect key="frame" x="4" y="19" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="SZc-fd-Nah"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                        <color key="textColor" red="0.1176470588" green="0.74901960779999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g55-dZ-2RH">
+                        <rect key="frame" x="22.5" y="43" width="5" height="5"/>
+                        <color key="backgroundColor" red="0.1176470588" green="0.74901960779999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="C83-B3-Cw6"/>
+                            <constraint firstAttribute="height" constant="5" id="d1t-PE-ibB"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="2.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="3yw-AC-hTf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1GL-7x-YgF"/>
+                <constraint firstItem="3yw-AC-hTf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="37P-aN-oHx"/>
+                <constraint firstAttribute="trailing" secondItem="6fr-6l-U0Z" secondAttribute="trailing" constant="4" id="YaX-AY-kqm"/>
+                <constraint firstItem="6fr-6l-U0Z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="aOa-Mh-Dds"/>
+                <constraint firstAttribute="bottom" secondItem="g55-dZ-2RH" secondAttribute="bottom" constant="2" id="cNf-tk-dFj"/>
+                <constraint firstItem="g55-dZ-2RH" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="edZ-EZ-kz1"/>
+                <constraint firstAttribute="trailing" secondItem="3yw-AC-hTf" secondAttribute="trailing" constant="4" id="mAP-fG-aeK"/>
+                <constraint firstAttribute="bottom" secondItem="6fr-6l-U0Z" secondAttribute="bottom" constant="10" id="utj-Ek-Z9e"/>
+            </constraints>
+            <connections>
+                <outlet property="dayLabel" destination="6fr-6l-U0Z" id="dbR-un-hcX"/>
+                <outlet property="dotView" destination="g55-dZ-2RH" id="rCu-VL-BmW"/>
+                <outlet property="monthAndDateLabel" destination="3yw-AC-hTf" id="a2T-xd-dCr"/>
+            </connections>
+            <point key="canvasLocation" x="-65" y="21"/>
+        </collectionViewCell>
+    </objects>
+</document>
